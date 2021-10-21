@@ -18,7 +18,7 @@ async def on_message(msg):
     cont = cont.translate(str.maketrans('', '', string.punctuation))
     if msg.content.startswith('$ping'):
         await msg.channel.send('pong')
-    elif ('based' in cont.split(" ")) and not ('based on' in cont):
+    elif ('based' in cont.split(" ")) and not (('based on' in cont) or ('based in' in cont)):
         await msg.channel.send(f"> {msg.content} \nbased? based on what")
 
 
